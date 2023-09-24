@@ -1,0 +1,230 @@
+@font-face {
+  font-family: montserrat;
+  src: url();
+}
+
+nav {
+  display: flex;
+  margin: 0 0 0 auto;
+  width: fit-content;
+}
+
+nav li a {
+  color: beige;
+}
+nav li a:hover {
+  color: #983b9f;
+}
+
+li {
+  display: block;
+  padding: 10px;
+  font-size: x-large;
+}
+
+body {
+  background-color: #384466;
+  font-family: monospace;
+}
+
+hr {
+  width: 70%;
+  background-color: #983b9f;
+  height: 2px;
+  border: none;
+}
+.grid1-1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-items: center;
+  border: 2px solid rgb(2, 2, 2);
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgb(43, 42, 40);
+  background-color: #c7cfea;
+  margin: 70px;
+}
+
+.ommig {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 80px;
+}
+
+.ommig div p {
+  font-size: large;
+  text-align: center;
+}
+
+.praktik {
+  background-color: #7e98e6;
+  border: 2px black;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgb(43, 42, 40);
+  margin: 20px;
+  padding: 50px;
+}
+
+.praktik h2 {
+  text-align: center;
+}
+
+.jsme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  background-color: #6178bd;
+  border: 2px black;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgb(43, 42, 40);
+  margin: 20px;
+}
+
+.selfie {
+  max-width: 60%;
+  filter: grayscale(50);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.projectbtn {
+  background-color: antiquewhite;
+  font-family: monospace;
+  font-size: x-large;
+  margin: 20px;
+  display: block;
+  margin: 15px auto;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgb(43, 42, 40);
+  width: 200px;
+  height: 125px;
+}
+
+.projectbtns {
+  margin: 10px;
+}
+
+.prbtn {
+  text-decoration: none;
+  color: rgb(3, 3, 3);
+}
+
+a {
+  color: black;
+}
+
+.firsttext {
+  margin-right: 50px;
+}
+
+.firsttext p {
+  font-size: large;
+}
+
+.logokune {
+  width: 60px;
+}
+
+.logokiddush {
+  width: 60px;
+}
+.skills1 {
+  margin: 10px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #c7cfea;
+  background-size: 40px;
+  box-shadow: 10px 10px 5px rgb(43, 42, 40);
+  border: 2px black;
+  border-radius: 10px;
+  font-size: x-large;
+  font-weight: bold;
+  padding: 50px;
+}
+
+.skills1 h2 {
+  color: #c7cfea;
+  font-size: xx-large;
+}
+
+.cvgrid1-1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 80px;
+  border: 2px black;
+}
+
+.cvsection {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #7e98e6;
+  font-size: large;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 10px 10px 5px rgb(43, 42, 40);
+  margin: 80px;
+}
+
+.cvsection div {
+  padding: 30px;
+}
+
+footer {
+  display: flex;
+  color: #d688db;
+  padding: 20px;
+  font-size: large;
+}
+
+footer p {
+  padding: 20px;
+}
+
+footer a {
+  color: #d688db;
+}
+
+.h2projekt {
+  text-align: center;
+  font-size: xx-large;
+  color: antiquewhited;
+}
+
+#kiddushbtn img {
+  content: url("img/Group 4.svg");
+}
+
+#kiddushbtn:hover img {
+  content: url("img/kiddushblue.svg");
+}
+
+#kiddushbtn:hover a {
+  color: #2208ea;
+}
+
+#kunebtn img {
+  content: url("img/kune.svg");
+}
+
+#kunebtn:hover img {
+  content: url("img/kunecolors.svg");
+}
+
+#kunebtn:hover a {
+  color: #8706c8;
+}
+
+#royalbtn img {
+  content: url("img/playroomblack.svg");
+}
+
+#royalbtn:hover img {
+  content: url("img/playroomred.svg");
+}
+#royalbtn:hover a {
+  color: #6c1e1d;
+}
