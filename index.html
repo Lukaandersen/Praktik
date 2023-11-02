@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+<!--     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display&family=Noto+Serif&family=Playfair+Display&display=swap" rel="stylesheet"> 
+ --><link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Nunito+Sans:opsz@6..12&family=Young+Serif&display=swap" rel="stylesheet">    
+ <link rel="stylesheet" href="https://use.typekit.net/ynr4ggn.css">
+
+<link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
     <nav>
+      <li class="btn"><button onclick="myFunction()"><img src="img/svg/moon-solid.svg" alt="Måneikon" class="icon" id="modeIcon">
+      </button></li>
       <li>
         <a href="https://www.linkedin.com/in/luka-maria-lundt-andersen/">Linkedin</a>
       </li>
@@ -16,27 +22,28 @@
       </li>
       <li><a href="mailto:luka_andersen@hotmail.com">E-mail</a></li>
     </nav>
-    <div class="grid1-1">
-      <img src="img/selfieedited.png" alt="selfie" class="selfie" />
+    <div class="grid1-1" id="imagechange">
+        <div></div>
       <div class="firsttext">
-        <h2>Luka Maria Lundt Andersen | Multimediedesigner | 25 år | Østerbro</h2>
+        <p class="headline">| Luka Maria Lundt Andersen | <span class="greentext">MULTIMEDIEDESIGN</span> | 25 ÅR | ØSTERBRO |</p>
         <p>
-          Kreativt menneske med lyst til læring. Gammel sjæl - Bosat i København på Østerbro. <br />
-          I løbet af de sidste fem år har jeg i samme firma haft ansvar for diverse opgaver. <br />Praktisk daglig drift webshop, opsætning af diverse IT-systemer, teknisk drift på webshop og projektledelse af udvikling af hjemmeside.
+          Kreativt menneske med lyst til læring.  <br />
+          I løbet af de sidste fem år har jeg i samme firma haft ansvar for diverse webshop-relaterede opgaver. Praktisk daglig drift af webshop, opsætning af diverse IT-systemer, teknisk drift på webshop og projektledelse af udvikling af hjemmeside. <br> I min fritid går jeg til sang, hører en masse musik og træner. <br> Bosat i København på Østerbro.
         </p>
       </div>
     </div>
     <hr />
+    <h2 class="sectionheadline">PRAKTIK</h2>
     <div class="ommig">
       <div class="praktik">
-        <h2>Mål med min praktik</h2>
         <p>
-          Under min praktik vil jeg gerne finpudse mine færdigheder indenfor HTML, CSS og Javascript. Javascript er noget jeg virkelig gerne vil arbejde mere med og lære da jeg finder det væsentligt mere udfordrende end HTML og CSS. <br />
-          Adobe programmerne ønsker jeg ligeledes at have fingrene i da jeg er glad for sammenspillet mellem kodning og design. At skabe grafiske elementer og inkorporere dette via kodningen. <br />
+          Under min praktik vil jeg gerne finpudse mine færdigheder indenfor HTML, CSS og Javascript. Javascript er noget jeg virkelig gerne vil arbejde mere med, da jeg finder det væsentligt mere udfordrende end HTML og CSS. <br> Øvrige frameworks indenfor kodning har også stor interesse. <br />
+          Adobe programmerne ønsker jeg ligeledes at have fingrene i, da jeg er glad for sammenspillet mellem kodning og design. At skabe grafiske elementer og inkorporere dette via kodningen. <br />
           <br />Jeg har en bred forståelse for kodningen men vil gerne højne mine færdigheder rent praktisk og arbejde i et team eller under en mentor hvor jeg kan sparre og lære en masse nyt. <br />
           Et ideelt udfald af min praktik ville være at have brugt 10 uger på at lære forskellige måder at løse diverse kode-problemer på, få en fornemmelse af hvordan en arbejdsplads kan se ud for en frontend-developer eller lign samt at have
           tilegnet mig en masse nye færdigheder indenfor den digitale verden, både med kodning og design.
         </p>
+        <p></p>
       </div>
       <div class="jsme">
         const me = {<br />
@@ -45,37 +52,9 @@
         pets: "none", <br />
         student: true, <br />goal: "internship" <br />};
       </div>
-    </div>
-    <hr />
-    <div class="cvgrid1-1">
-      <div class="projectbtns">
-        <h2 class="h2projekt">Projekter</h2>
-
-        <button class="projectbtn" id="kiddushbtn">
-          <a href="https://kiddush.netlify.app/">
-            Kiddush <br />
-            <br />
-            <img src="img/Group 4.svg" alt="kiddushlogo" class="logokiddush" />
-          </a>
-        </button>
-
-        <button class="projectbtn" id="royalbtn">
-          <a href="https://royalescapes.netlify.app">
-            Royal Escapes <br />
-            <br /><img class="royalfront" src="img/playroomblack.svg" alt="playroomlogo"
-          /></a>
-        </button>
-        <button class="projectbtn" id="kunebtn">
-          <a href="https://kune.netlify.app/">
-            Kune Festival <br />
-            <br />
-            <img src="img/kune.svg" alt="kunelogo" class="logokune" />
-          </a>
-        </button>
-      </div>
-      <div class="skills1">
-        <h2>Færdigheder</h2>
         <div class="skills">
+          <h2>SKILLS</h2>
+          <div class="skillgrid">
           <div>
             <p>- UX/IU</p>
             <p>- HTML</p>
@@ -83,8 +62,10 @@
             <p>- Javascript</p>
             <p>- Adobe</p>
             <p>- Wordpress</p>
+            <p>- Astro</p>
           </div>
           <div>
+            <p>- Tailwind</p>
             <p>- Shopify</p>
             <p>- Figma</p>
             <p>- User testing</p>
@@ -92,23 +73,51 @@
             <p>- Prototyping</p>
             <p>- Projektstyring</p>
           </div>
+          </div>
         </div>
-      </div>
     </div>
+    <div>
+    <hr />
+    <h2 class="sectionheadline">PROJEKTER</h2>
+    <div class="projectgrid">
+    <div class="projectdisplay">
+        <div>
+          <a href="https://kiddush.netlify.app/" class="menu-item" data-image="img/kiddushillu.png" target="_blank" >
+            <span>KIDDUSH</span>
+          <hr>
+          </a>
+     </div>
+     <div>
+      <a href= "https://royalescapes.netlify.app/" class="menu-item" data-image="img/playroom.png" target="_blank">
+        <span>ROYAL ESCAPES</span>
+        <hr>
+      </a>
+</div>
+<div>
+  <a href= "https://kune.netlify.app/" class="menu-item" data-image="img/kune.png" target="_blank">
+    <span>KUNE</span>
+    <hr>
+  </a>
+</div>
+  </div>
+    <img class="projektillustration" src="img/playroom.png"></img>
+    </div>
+  </div>
+      
     <hr />
     <div class="cvsection">
-      <div>
+      <div class="cv">
         <h2>CV</h2>
         <p>
-          Maj 2014 | Salgsassistent SuperBrugsen – Deltid <br />
-          Aug 2018 | Salgsassistent Helsemin A/S – Deltid <br />
-          Nov 2018 | Salgsassistent / Webshop medarbejder Helsemin A/S - Deltid <br />
-          Sep 2019 | Salgsassistent / Ad hoc Kontoropgaver Helsemin A/S - Fuldtid <br />
+          Maj 2014 | Salgs ass. SuperBrugsen – Deltid <br />
+          Aug 2018 | Salgs ass.  Helsemin A/S – Deltid <br />
+          Nov 2018 | Salgs ass. / Webshop Helsemin A/S - Deltid <br />
+          Sep 2019 | Web Kontoropgaver Helsemin A/S - Fuldtid <br />
           Jun 2019 | Assistant Web Developer Helsemin A/S – Fuldtid <br />
           Aug 2022 | Web Assistant Helsemin A/S - Deltid <br />
         </p>
       </div>
-      <div>
+      <div class="uddannelse">
         <h2>Uddannelse</h2>
         <p>
           Aug 2004 | Vibenshus Folkeskole <br />
@@ -117,12 +126,45 @@
           Aug 2022 | KEA Multimediedesign
         </p>
       </div>
-    </div>
+      </div>
+      <hr />
+<h2 class="sectionheadline">ANBEFALINGER</h2>
+      <div class="testamonials">
+        <div class="test1">
+            <p>‘’En blæksprutte med et positivt sind og stærkt gå-på mod.
+              Jeg havde fornøjelsen af at arbejde sammen med Luka, som, med stort engagement, fleksibilitet og god 
+              forståelse for salg, hjalp teamet og kunderne under den omskiftelige COVID19-periode. 
+              Luka har udvist en stærk holdånd og kløet på for at nå målsætningerne, trods at arbejdsopgaverne ikke 
+              altid har ligget inden for de aftalte rammer. En naturlig nysgerrighed for at udfordre egne evner i det 
+              digitale landskab har løbende medført et øget ansvar under frihed og en betydelig kompetence forøgelse.’’</p>
+              <p>Tideligere leder - Christian Meier-Dobel</p>
+        </div>
+        <div class="test2">
+            <p>‘’ When we first met, I was immediately impressed with Luka. During the time we worked 
+              together, her understanding of marketing and digital project management grew far more than that of 
+              her peers.
+              Along with her undeniable talent and eager to learn and improve her talents, Luka has always been 
+              an absolute joy to work with. She is a true team player, and always fosters positive discussions and 
+              brings the best out of other employees despite her young age.
+              It’s not just her technical skills that impress me, however. Luka is a joy to work with because of her 
+              amazingly positive attitude and eager to always wanting to do better. Her determination and open 
+              mindset were also necessary and valued not just by myself, but by her colleagues and managers, 
+              who often relied on her to get the job done. During our time together, Luka has displayed great talents in E-commerce and digital project 
+              management, a good sense of what works within different SoMe platforms and the coordination 
+              between creative, technical and good business understanding.  ’’</p>
+              <p>Nuværende Chef - Nadia Johansen</p>
+        </div>
+      </div>
 
     <footer>
+    <p id="kontakt">KONTAKT MIG</p>
+    <hr class="footerhr">
       <p>TLF: 28920309</p>
+      <hr class="footerhr">
       <p>Email: luka_andersen@hotmail.com</p>
-      <a href="https://www.linkedin.com/in/luka-maria-lundt-andersen/"><p>Linkedin</p> </a>
+      <hr class="footerhr">
+      <a href="https://www.linkedin.com/in/luka-maria-lundt-andersen/" id="a"><p>Linkedin</p> </a>
     </footer>
+    <script src="js.js"></script>
   </body>
 </html>
