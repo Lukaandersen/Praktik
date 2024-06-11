@@ -57,3 +57,83 @@ function hoverSwitch() {
   });
 }
 hoverSwitch();
+
+document.querySelectorAll('.accordion-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const accordionContent = button.nextElementSibling;
+    const projectImage = document.querySelector('.projektillustration');
+    
+    // Toggle active class and accordion content display
+    button.classList.toggle('active');
+    if (button.classList.contains('active')) {
+      accordionContent.style.display = 'block';
+    } else {
+      accordionContent.style.display = 'none';
+    }
+
+    // Update the image on the right
+    projectImage.src = button.getAttribute('data-image');
+
+    // Close other accordion items
+    document.querySelectorAll('.accordion-button').forEach(otherButton => {
+      if (otherButton !== button) {
+        otherButton.classList.remove('active');
+        otherButton.nextElementSibling.style.display = 'none';
+      }
+    });
+  });
+});
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const container = document.querySelector('.container');
+
+//   function createParticle() {
+//       const particle = document.createElement('div');
+//       particle.classList.add('particle');
+//       container.appendChild(particle);
+
+//       particle.style.left = `${Math.random() * 100}vw`;
+//       particle.style.top = `${Math.random() * 100}vh`;
+
+//       particle.style.animationDuration = `${Math.random() * 3 + 2}s`;
+//       particle.style.animationDelay = `${Math.random() * 5}s`;
+
+//       particle.addEventListener('animationend', () => {
+//           particle.remove();
+//       });
+//   }
+
+//   setInterval(createParticle, 300);
+//     // Stop genereringen af partikler efter 10 sekunder
+//     setTimeout(() => {
+//       clearInterval(particleInterval);
+//     }, 10000); // 10000 ms = 10 sekunder
+//   });
+
+
+let currentIndex = 0;
+
+document.querySelector('.prev').addEventListener('click', () => {
+    const testimonials = document.querySelectorAll('.testamonial');
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = testimonials.length - 1;
+    }
+    updateSwiper();
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+    const testimonials = document.querySelectorAll('.testamonial');
+    if (currentIndex < testimonials.length - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+    updateSwiper();
+});
+
+function updateSwiper() {
+    const swiperWrapper = document.querySelector('.swiper-wrapper');
+    swiperWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+}

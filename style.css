@@ -1,124 +1,22 @@
 :root {
+  --font-para: "Josefin Sans", josefin sans;
   --font-paragraph: "Noto Sans Display", sans-serif;
-  --font-display: "kudryashev-d-contrast", sans-serif;
+  --font-display: "Kudryashev-D-Contrast", sans-serif;
+  --color-darkest: #201F1F;
+  --color-darkmedium: #424146;
+  --color-medium: #5F5E66;
+  --color-lightmedium: #8E888E;
+  --color-light: #C6C2C3;
+  --color-darkgreen: #142928;
+  --color-darkmediumgreen: #1E1E1E;
+  --color-mediumgreen: #A5A998;
+  --color-lightgreen: #C4BFB9;
 }
 
-:root {
-  --color-darkgreen: #273d41;
-  --color-light: #e1d9d9;
-  --color-lighter: #fcfbf3;
-  --color-accent1: #720808;
-  --color-accent2: #3d868a;
-}
-
-.dark-mode {
-  background-color: #250d0d;
-  color: #e1d9d9;
-}
-
-.dark-mode .btn button img {
-  width: 2rem;
-}
-
-.dark-mode nav li a {
-  color: #a80505;
-  font-family: var(--font-display);
-}
-.dark-mode nav li a:hover {
-  color: #f65008;
-}
-
-.dark-mode .grid1-1 {
-  background-image: url("img/selfieedited2.png");
-}
-
-.dark-mode .headline {
-  color: #e1d9d9;
-  font-family: var(--font-display);
-}
-
-.dark-mode .sectionheadline {
-  font-family: var(--font-display);
-}
-
-.dark-mode .greentext {
-  color: #f65008;
-}
-
-.dark-mode .firsttext {
-  color: #ae9090;
-}
-
-.dark-mode .skills {
-  font-weight: bold;
-  color: #1b0a0a;
-  background-color: #f98b05d5;
-}
-
-.dark-mode .jsme {
-  font-weight: bold;
-  color: #250d0d;
-  background-color: #fd6506c5;
-}
-
-.dark-mode .praktik {
-  font-weight: bold;
-  color: #250d0d;
-  background-color: #f91f07bb;
-}
-
-.dark-mode .cvsection {
-  color: #ae9090;
-}
-
-.dark-mode .test1 {
-  color: #c61515;
-}
-
-.dark-mode .test2 {
-  color: #df4402;
-}
-
-.dark-mode footer {
-  background-color: #a30606;
-  color: #120202;
-  font-family: var(--font-display);
-}
-
-.dark-mode #kontakt {
-  font-family: var(--font-display);
-}
-
-.dark-mode hr {
-  background-color: #f65008;
-  border: none;
-}
-
-.dark-mode .footerhr {
-  background-color: #070000;
-  border: none;
-}
-.dark-mode footer {
-  font-weight: bold;
-}
-
-.dark-mode #a {
-  color: #250d0d;
-}
-
-/* .dark-mode .grid1-1 {
-
-  background-repeat: no-repeat;
-  background-position: 0% 115%;
-  background-attachment: fixed;
-  background-size: 25%;
-  margin-top: 30px;
-  margin-left: 0;
-} */
-
+/* Default styles */
 body {
   background-color: var(--color-light);
-  font-family: var(--font-paragraph);
+  font-family: var(--font-para);
 }
 
 nav {
@@ -128,11 +26,12 @@ nav {
 }
 
 nav li a {
-  color: var(--color-accent1);
+  color: var(--color-darkest);
   font-family: var(--font-display);
 }
+
 nav li a:hover {
-  color: var(--color-accent2);
+  color: #5B6758;
 }
 
 li {
@@ -151,19 +50,18 @@ button:hover {
   cursor: pointer;
 }
 
-.grid1-1 {
-  z-index: 2;
-  background-image: url("img/selfieedited.png");
+.bg {
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 0% -30%;
-  background-size: width= "600rem";
+  background-size: cover;
+}
+
+.grid1-1 {
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-items: center;
-  margin-left: 70px;
-  margin-right: 70px;
+
 }
 
 .headline {
@@ -173,21 +71,25 @@ button:hover {
 }
 
 .firsttext {
-  color: #342222;
+  color: var(--color-darkest);
   padding: 205px;
+  position: relative;
+  z-index: 20;
 }
+
 .greentext {
-  color: var(--color-accent1);
+  color: #5B6758;
 }
 
 hr {
-  height: 1px;
+  height: 0.5px;
   width: 70%;
   background-color: var(--color-darkgreen);
 }
+
 .hr2 {
   width: 100%;
-  height: 1px;
+  height: 0.5px;
   background-color: var(--color-darkgreen);
 }
 
@@ -206,7 +108,11 @@ hr {
 }
 
 .menu-item span {
-  color: #720808;
+  color: var(--color-darkmediumgreen);
+}
+
+.menu-item span:hover {
+  color: #5B6758;
 }
 
 .menu-item hr {
@@ -232,29 +138,28 @@ a:link {
   margin: 20px;
   width: 500px;
   height: 300px;
-  transition: transform 0.3s; /* Tilføj en glat overgangseffekt */
+  transition: transform 0.3s;
+  background-size: cover;
 }
 
 .sectionheadline {
-  text-align: right;
-  color: var(--color-accent1);
+  text-align: center;
+  color: var(--color-darkgreen);
   font-family: var(--font-display);
-  padding-right: 15rem;
 }
+
 .ommig {
-  margin: 50px;
   gap: 10px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
 }
 
 .skills {
-  background-color: #125a5bc7;
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
+  background-color: var(--color-medium);
   padding: 30px;
   font-size: larger;
+  color: #CCCCCC;
 }
 
 .skillgrid {
@@ -263,25 +168,28 @@ a:link {
 }
 
 .skills h2 {
+  text-align: right;
   font-family: var(--font-display);
   margin-bottom: 1rem;
   margin-top: 0;
+  position: absolute;
+  margin-top: -40px;
+  color: var(--color-darkgreen);
 }
+
 .jsme {
   display: grid;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-accent2);
-  grid-column: 2 / 4;
-  grid-row: 2 / 3;
+  background-color: var(--color-medium);
+  color: #CCCCCC;
   font-size: x-large;
   padding: 30px;
 }
 
 .praktik {
-  background-color: #395d5f;
-  grid-column: 3 / 5;
-  grid-row: 3 / 5;
+  background-color: var(--color-medium);
+  color: #CCCCCC;
   padding: 30px;
 }
 
@@ -297,21 +205,21 @@ a:link {
 .cvsection {
   color: #342222;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.cv {
+
+
+.cv,
+.uddannelse {
   padding: 1rem;
-  grid-column: 2/4;
 }
 
 .cv h2 {
   font-family: var(--font-display);
-}
-
-.uddannelse {
-  padding: 1rem;
-  grid-column: 4/6;
 }
 
 .uddannelse h2 {
@@ -322,9 +230,19 @@ a:link {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  /*   padding: 2rem 8rem 3rem 8rem;
- */
+  margin-bottom: 20px;
 }
+
+.testamonial {
+  text-align: center;
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 60px;
+  background-color: var(--color-medium);
+  color: var(--color-light);
+}
+
+
 
 .test1 {
   padding: 4rem 0 4rem 0;
@@ -339,6 +257,9 @@ a:link {
   grid-column: 4/6;
   grid-row: 2/4;
 }
+
+
+
 
 footer {
   background-color: var(--color-darkgreen);
@@ -360,6 +281,221 @@ footer {
   font-family: var(--font-display);
 }
 
+
+  
+.test2 {
+  padding: 1rem;
+  margin-top: 5px;
+}
+
+.test1 {
+  padding: 1rem;
+}
+
+.sectionheadline {
+  padding-right: 0;
+  display: grid;
+  justify-content: center;
+}
+
+
+
+.background-container {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+pointer-events: none;
+overflow: hidden;
+z-index: -1;
+}
+
+/* .particle {
+position: absolute;
+width: 5px;
+height: 5px;
+background-color: silver;
+border-radius: 50%;
+box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+animation: fly linear infinite;
+} */
+
+/* @keyframes fly {
+0% {
+  transform: translate(0, 0) scale(1);
+  opacity: 1;
+}
+100% {
+  transform: translate(calc(var(--translateX) - 5px), calc(var(--translateY) - 5px)) scale(0.5);
+  opacity: 0;
+}
+} */
+
+.content {
+position: relative;
+z-index: 1;
+padding: 20px;
+color: #fff;
+}
+
+.Selfie {
+filter: grayscale(50%);
+position: absolute;
+z-index: 1;
+left: -70px;
+opacity: 1;
+height: 700px;
+}
+
+.swiper-container {
+position: relative;
+width: 60%;
+margin: auto;
+overflow: hidden;
+border: 1px solid #ccc;
+border-radius: 10px;
+margin-bottom: 20px;
+}
+
+.swiper-wrapper {
+display: flex;
+transition: transform 0.5s ease;
+}
+
+
+
+.swiper-button {
+position: absolute;
+bottom: 10px;
+background-color: rgba(0, 0, 0, 0.5);
+color: white;
+border: none;
+border-radius: 50%;
+padding: 10px;
+cursor: pointer;
+z-index: 10;
+}
+
+.swiper-button.prev {
+left: 50%;
+transform: translateX(-150%) translateY(0);
+}
+
+.swiper-button.next {
+left: 50%;
+transform: translateX(50%) translateY(0);
+}
+
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: var(--color-medium);
+  color: #e1d9d9;
+}
+
+.dark-mode .btn button img {
+  width: 2rem;
+}
+
+.dark-mode nav li a {
+  color: var(--color-light);
+  font-family: var(--font-display);
+}
+
+.dark-mode nav li a:hover {
+  color: var(--color-mediumgreen);
+}
+
+.dark-mode .headline {
+  color: var(--color-mediumgreen);
+  font-family: var(--font-display);
+}
+
+.dark-mode .grid1-1 {
+  background-size: 40%;
+  background-position: 0% 75%;
+}
+
+
+.dark-mode .sectionheadline {
+  font-family: var(--font-display);
+  color: var(--color-light);
+}
+
+.dark-mode .greentext {
+  color: var(--color-darkgreen);
+}
+
+.dark-mode .firsttext {
+  color: var(--color-mediumgreen);
+}
+
+.dark-mode .skills {
+  font-weight: bold;
+  color: var(--color-light);
+  background-color: var(--color-darkmedium);
+}
+
+.dark-mode .jsme {
+  font-weight: bold;
+  color: var(--color-light);
+  background-color: var(--color-darkmedium);
+}
+
+.dark-mode .menu-item span:hover {
+  color: #a1c597;
+}
+
+.dark-mode .praktik {
+  font-weight: bold;
+  color: var(--color-light);
+  background-color: var(--color-darkmedium);
+}
+
+.dark-mode .cvsection {
+  color: var(--color-light);
+}
+
+.dark-mode .test1 {
+  color: var(--color-lightgreen);
+}
+
+.dark-mode .test2 {
+  color: var(--color-mediumgreen);
+}
+
+.dark-mode footer {
+  background-color: var(--color-darkest);
+  color: var(--color-light);
+  font-family: var(--font-display);
+  font-weight: bold;
+}
+
+.dark-mode #kontakt {
+  font-family: var(--font-display);
+}
+
+.dark-mode hr {
+  background-color: var(--color-lightgreen);
+  border: none;
+}
+
+.dark-mode .footerhr {
+  background-color: var(--color-mediumgreen);
+  border: none;
+}
+
+.dark-mode #a {
+  color: var(--color-light);
+}
+
+.dark-mode .testamonial {
+  background-color: var(--color-lightmedium);
+}
+
+
+/* Media Queries */
 @media (max-width: 1024px) {
   .grid1-1 {
     background-size: 45%;
@@ -369,8 +505,6 @@ footer {
 
   .firsttext {
     padding: 125px 75px 75px 250px;
-    /*   padding-left: 250px;
-    padding-bottom: 200px; */
   }
 
   .ommig {
@@ -379,6 +513,7 @@ footer {
     align-content: center;
     flex-wrap: wrap;
   }
+
   .praktik,
   .jsme,
   .skills {
@@ -402,59 +537,97 @@ footer {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 813px) {
   .grid1-1 {
+display: block;    margin-top: 70px;
     background-size: 50%;
     background-position: 0% 85%;
     margin-left: 0%;
   }
 
-  .dark-mode .grid1-1 {
-    background-size: 40%;
-    background-position: 0% 75%;
-  }
-
   .firsttext {
-    padding-left: 380px;
+    padding: 0%;
   }
 
-  .dark-mode .firsttext {
-    /*  padding-left: 220px;
-    padding-bottom: 50px; */
-    padding: 50px 50px 50px 100px;
+  .Selfie {
+    position: relative;
   }
 
   .ommig {
-    justify-content: center;
-    display: block;
+    margin: 50px auto; /* Centrerer på x-aksen */
     gap: 10px;
-    width: 350px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center; /* Centrerer på x-aksen */
+    align-items: center; /* Centrerer på y-aksen */
   }
-  .praktik,
-  .jsme,
-  .skills {
-    margin: 10px;
+
+  .ommig .jsme,
+  .ommig .skills,
+  .ommig .praktik {
+    width: 90%;
+  }
+
+  .ommig .jsme{
+    background-color: var(--color-lightmedium);
+  }
+
+  .ommig .skills {
+    background-color: var(--color-darkmedium);
+  }
+
+  .projektillustration {
+ width: 300px;
+ height: 200px;
+  }
+
+  .cvsection {
+    grid-template-columns: 1fr;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .testamonials {
-    justify-content: center;
-    display: block;
-    margin-left: 50px;
-    margin-right: 50px;
+    grid-template-columns: repeat(3, 1fr); /* Ændre til 3 kolonner i mobilvisning */
   }
 
-  .test2 {
-    padding: 1rem;
-    margin-top: 5px;
+  .swiper-container {
+    width: 90%; /* Ændret bredden til 90% */
+    margin: auto; /* Centrerer swiper-container */
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
   }
 
-  .test1 {
-    padding: 1rem;
+
+  .skills {
+    font-size: medium;
   }
 
-  .sectionheadline {
-    padding-right: 0;
-    display: grid;
-    justify-content: center;
-  }
+.skills h2 {
+  margin-left: -20px;
 }
+  .testamonial {
+    text-align: center;
+    min-width: 100%;
+    width: 700px;
+    padding: 20px;
+    background-color: var(--color-medium);
+    color: var(--color-light);
+  }
+
+  .projectgrid {
+    display: block;
+    text-align: center;
+  }
+
+
+  .firsttext {
+    text-align: center;
+    padding: 0%;
+    margin-top: 70px;
+  }
+
+}
+
