@@ -216,6 +216,7 @@ a:link {
 .cv,
 .uddannelse {
   padding: 1rem;
+  margin-left: 200px;
 }
 
 .cv h2 {
@@ -616,6 +617,10 @@ display: block;    margin-top: 70px;
     margin-bottom: 20px;
   }
 
+  .cv,
+.uddannelse {
+  margin-left: 0px;
+}
 
   .skills {
     font-size: medium;
