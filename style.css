@@ -568,12 +568,23 @@ display: block;    margin-top: 70px;
     width: 90%;
   }
 
+  .ommig .praktik {
+    height: fit-content;
+  }
+
   .ommig .jsme{
     background-color: var(--color-lightmedium);
   }
 
   .ommig .skills {
     background-color: var(--color-darkmedium);
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .skills h2 {
+    color: #A5A998;
+    margin-top: -20px;
   }
 
   .projektillustration {
@@ -591,6 +602,11 @@ display: block;    margin-top: 70px;
     grid-template-columns: repeat(3, 1fr); /* Ændre til 3 kolonner i mobilvisning */
   }
 
+  .swiper-button {
+    position: relative;
+    bottom:40px;
+    margin-left: -10px;
+  }
   .swiper-container {
     width: 90%; /* Ændret bredden til 90% */
     margin: auto; /* Centrerer swiper-container */
